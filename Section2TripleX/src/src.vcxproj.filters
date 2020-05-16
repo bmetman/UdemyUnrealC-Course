@@ -26,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MultiplyCode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ParseInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>

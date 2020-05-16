@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../src/Randomize.h"
+#include "../Randomize.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{F5CA1716-2603-4B53-8A45-78BE48A7BA65}</ProjectGuid>
+    <ProjectGuid>{0FF80E84-CF98-4FC5-AAB9-3C6920C26868}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>test</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -157,28 +157,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\ParseInput.cpp" />
-    <ClCompile Include="..\Randomize.cpp" />
-    <ClCompile Include="Randomize.test.cpp" />
+    <ClCompile Include="..\src\ParseInput.cpp" />
+    <ClCompile Include="..\src\Randomize.cpp" />
+    <ClCompile Include="ParseInput.test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="ParseInput.test.cpp" />
+    <ClCompile Include="Randomize.test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Section2TripleX.vcxproj">
-      <Project>{e77d694a-6800-4851-ae54-22ebba4a31c0}</Project>
+    <ProjectReference Include="..\src\src.vcxproj">
+      <Project>{7a1dd1cd-274d-44ad-ae21-64f2d94ebce0}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="test.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

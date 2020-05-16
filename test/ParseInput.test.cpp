@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../src/ParseInput.h"
+#include "../ParseInput.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

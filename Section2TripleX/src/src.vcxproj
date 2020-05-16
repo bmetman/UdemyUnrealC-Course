@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{E77D694A-6800-4851-AE54-22EBBA4A31C0}</ProjectGuid>
-    <RootNamespace>Section2TripleX</RootNamespace>
+    <ProjectGuid>{7A1DD1CD-274D-44AD-AE21-64F2D94EBCE0}</ProjectGuid>
+    <RootNamespace>src</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,14 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Randomize.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ParseInput.cpp" />
+    <ClCompile Include="Randomize.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Randomize.h" />
-    <ClInclude Include="MultiplyCode.h" />
     <ClInclude Include="ParseInput.h" />
+    <ClInclude Include="Randomize.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
