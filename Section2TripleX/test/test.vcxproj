@@ -160,6 +160,7 @@
     <ClCompile Include="..\src\data\SecretCodeGateway.cpp" />
     <ClCompile Include="..\src\domain\SecretCode.cpp" />
     <ClCompile Include="..\src\domain\SecretCodeRepository.cpp" />
+    <ClCompile Include="..\src\resource\GuessSecretCode.cpp" />
     <ClCompile Include="..\src\usecase\GenerateSecretCode.cpp" />
     <ClCompile Include="..\src\usecase\ParseInput.cpp" />
     <ClCompile Include="data\SecretCodeGateway.test.cpp" />
@@ -171,12 +172,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="resource\GuessSecretCode.test.cpp" />
     <ClCompile Include="usecase\GenerateSecretCode.test.cpp" />
     <ClCompile Include="usecase\ParseInput.test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\data\SecretCodeGateway.h" />
     <ClInclude Include="..\src\domain\SecretCode.h" />
+    <ClInclude Include="..\src\resource\GuessSecretCode.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

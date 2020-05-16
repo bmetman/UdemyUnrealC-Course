@@ -48,6 +48,12 @@
     <ClCompile Include="data\SecretCodeGateway.test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="resource\GuessSecretCode.test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resource\GuessSecretCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -60,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\data\SecretCodeGateway.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\GuessSecretCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

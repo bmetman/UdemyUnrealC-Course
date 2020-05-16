@@ -143,6 +143,7 @@
     <ClCompile Include="domain\SecretCode.cpp" />
     <ClCompile Include="domain\SecretCodeRepository.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="resource\GuessSecretCode.cpp" />
     <ClCompile Include="usecase\GenerateSecretCode.cpp" />
     <ClCompile Include="usecase\ParseInput.cpp" />
   </ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="data\SecretCodeGateway.h" />
     <ClInclude Include="domain\SecretCode.h" />
     <ClInclude Include="domain\SecretCodeRepository.h" />
+    <ClInclude Include="resource\GuessSecretCode.h" />
     <ClInclude Include="usecase\GenerateSecretCode.h" />
     <ClInclude Include="usecase\ParseInput.h" />
   </ItemGroup>

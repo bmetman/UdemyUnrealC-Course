@@ -33,6 +33,9 @@
     <ClCompile Include="domain\SecretCodeRepository.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="resource\GuessSecretCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="usecase\GenerateSecretCode.h">
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="usecase\ParseInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\GuessSecretCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
