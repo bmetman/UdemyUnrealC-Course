@@ -1,6 +1,6 @@
 #include <iostream>
 #include <optional>
-#include "ParseInput.h"
+#include "usecase/ParseInput.h"
 #include "Randomize.h"
 
 std::optional<int> ReadNumberFromUser() {

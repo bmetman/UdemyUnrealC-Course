@@ -139,13 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="data\SecretCodeGateway.cpp" />
+    <ClCompile Include="domain\SecretCode.cpp" />
+    <ClCompile Include="domain\SecretCodeRepository.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ParseInput.cpp" />
     <ClCompile Include="Randomize.cpp" />
+    <ClCompile Include="usecase\GenerateSecretCode.cpp" />
+    <ClCompile Include="usecase\ParseInput.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="data\SecretCodeGateway.h" />
+    <ClInclude Include="domain\SecretCode.h" />
+    <ClInclude Include="domain\SecretCodeRepository.h" />
     <ClInclude Include="ParseInput.h" />
     <ClInclude Include="Randomize.h" />
+    <ClInclude Include="usecase\GenerateSecretCode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

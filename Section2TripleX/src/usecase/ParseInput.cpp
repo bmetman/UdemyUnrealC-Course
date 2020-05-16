@@ -10,5 +10,4 @@ std::optional<int> ParseInput::ParseInt(std::string input)
 	catch (std::invalid_argument&) {
 		return std::nullopt;
 	}
-	
 }

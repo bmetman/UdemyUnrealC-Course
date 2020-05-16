@@ -1,1 +1,4 @@
 .vs/
+Debug/
+src/Debug
+test/Debug
