@@ -1,8 +1,8 @@
 #include "GuessSecretCode.h"
 
-bool GuessSecretCode::IsGuessCorrect(const SecretCode& guess)
+bool GuessSecretCode::IsGuessCorrect(const Code& guess)
 {
-	return guess.Number1 == secretCode.Number1 &&
-		guess.Number2 == secretCode.Number2 &&
-		guess.Number3 == secretCode.Number3;
+	return guess.Number1 == SecretCode.Number1 &&
+		guess.Number2 == SecretCode.Number2 &&
+		guess.Number3 == SecretCode.Number3;
 }

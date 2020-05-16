@@ -1,7 +1,7 @@
 #include <iostream>
 #include <optional>
 #include "usecase/ParseInput.h"
-#include "usecase/GenerateSecretCode.h"
+#include "usecase/GenerateCode.h"
 
 std::optional<int> ReadNumberFromUser() {
 	std::string UserInput;
@@ -10,7 +10,7 @@ std::optional<int> ReadNumberFromUser() {
 }
 
 int main() {
-	auto secretCode = GenerateSecretCode().Get();
+	auto secretCode = GenerateCode().Get();
 
 	int Guess = -1;
 	while (Guess != secretCode.GetMultipliedNumbers()) {

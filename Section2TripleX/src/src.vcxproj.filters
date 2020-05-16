@@ -21,39 +21,39 @@
     <ClCompile Include="usecase\ParseInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="usecase\GenerateSecretCode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="domain\SecretCode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="data\SecretCodeGateway.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="domain\SecretCodeRepository.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="resource\GuessSecretCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="domain\Code.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\GenerateCode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="domain\CodeRepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data\CodeGateway.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="usecase\GenerateSecretCode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="domain\SecretCode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="data\SecretCodeGateway.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="domain\SecretCodeRepository.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="usecase\ParseInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource\GuessSecretCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="domain\Code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\GenerateCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="domain\CodeRepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="data\CodeGateway.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

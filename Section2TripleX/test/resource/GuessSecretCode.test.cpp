@@ -1,14 +1,14 @@
 #include "../pch.h"
 #include "CppUnitTest.h"
-#include "../../src/usecase/GenerateSecretCode.h"
+#include "../../src/usecase/GenerateCode.h"
 #include "../../src/resource/GuessSecretCode.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-class GenerateSecretCodeMock : public GenerateSecretCode {
+class GenerateCodeMock : public GenerateCode {
 public:
-	SecretCode Get() override {
-		return SecretCode(-1, -1, -1);
+	Code Get() override {
+		return Code(-1, -1, -1);
 	}
 };
 
@@ -20,14 +20,14 @@ namespace test
 
 		TEST_METHOD(Given_GuessCorrect_When_IsGuessCorrect_Then_ReturnTrue)
 		{
-			std::shared_ptr<GenerateSecretCode> generateSecretCodeMock = std::make_shared<GenerateSecretCodeMock>();
-			Assert::IsTrue(GuessSecretCode(generateSecretCodeMock).IsGuessCorrect(SecretCode(-1, -1, -1)));
+			std::shared_ptr<GenerateCode> generateCodeMock = std::make_shared<GenerateCodeMock>();
+			Assert::IsTrue(GuessSecretCode(generateCodeMock).IsGuessCorrect(Code(-1, -1, -1)));
 		}
 
 		TEST_METHOD(Given_GuessIncorrect_When_IsGuessCorrect_Then_ReturnFalse)
 		{
-			std::shared_ptr<GenerateSecretCode> generateSecretCodeMock = std::make_shared<GenerateSecretCodeMock>();
-			Assert::IsFalse(GuessSecretCode(generateSecretCodeMock).IsGuessCorrect(SecretCode(0, 0, 0)));
+			std::shared_ptr<GenerateCode> generateCodeMock = std::make_shared<GenerateCodeMock>();
+			Assert::IsFalse(GuessSecretCode(generateCodeMock).IsGuessCorrect(Code(0, 0, 0)));
 		}
 	};
 }

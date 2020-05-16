@@ -157,15 +157,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\data\SecretCodeGateway.cpp" />
-    <ClCompile Include="..\src\domain\SecretCode.cpp" />
-    <ClCompile Include="..\src\domain\SecretCodeRepository.cpp" />
+    <ClCompile Include="..\src\data\CodeGateway.cpp" />
+    <ClCompile Include="..\src\domain\Code.cpp" />
+    <ClCompile Include="..\src\domain\CodeRepository.cpp" />
     <ClCompile Include="..\src\resource\GuessSecretCode.cpp" />
-    <ClCompile Include="..\src\usecase\GenerateSecretCode.cpp" />
+    <ClCompile Include="..\src\usecase\GenerateCode.cpp" />
     <ClCompile Include="..\src\usecase\ParseInput.cpp" />
-    <ClCompile Include="data\SecretCodeGateway.test.cpp" />
-    <ClCompile Include="domain\SecretCode.test.cpp" />
-    <ClCompile Include="domain\SecretCodeRepository.test.cpp" />
+    <ClCompile Include="data\CodeGateway.test.cpp" />
+    <ClCompile Include="domain\Code.test.cpp" />
+    <ClCompile Include="domain\CodeRepository.test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -173,13 +173,16 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="resource\GuessSecretCode.test.cpp" />
-    <ClCompile Include="usecase\GenerateSecretCode.test.cpp" />
+    <ClCompile Include="usecase\GenerateCode.test.cpp" />
     <ClCompile Include="usecase\ParseInput.test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\data\SecretCodeGateway.h" />
-    <ClInclude Include="..\src\domain\SecretCode.h" />
+    <ClInclude Include="..\src\data\CodeGateway.h" />
+    <ClInclude Include="..\src\domain\Code.h" />
+    <ClInclude Include="..\src\domain\CodeRepository.h" />
     <ClInclude Include="..\src\resource\GuessSecretCode.h" />
+    <ClInclude Include="..\src\usecase\GenerateCode.h" />
+    <ClInclude Include="..\src\usecase\ParseInput.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
