@@ -24,7 +24,7 @@ namespace test
 			std::shared_ptr<SecretCodeRepository> RepositoryMock = std::make_shared<SecretCodeRepositoryMock>();
 			Assert::AreEqual(
 				SecretCode(-1, -1, -1).GetSumOfNumbers(),
-				GenerateSecretCode(RepositoryMock).Generate().GetSumOfNumbers()
+				GenerateSecretCode(RepositoryMock).Get().GetSumOfNumbers()
 			);
 		}
 	};

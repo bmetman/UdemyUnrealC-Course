@@ -160,9 +160,9 @@
     <ClCompile Include="..\src\data\SecretCodeGateway.cpp" />
     <ClCompile Include="..\src\domain\SecretCode.cpp" />
     <ClCompile Include="..\src\domain\SecretCodeRepository.cpp" />
-    <ClCompile Include="..\src\Randomize.cpp" />
     <ClCompile Include="..\src\usecase\GenerateSecretCode.cpp" />
     <ClCompile Include="..\src\usecase\ParseInput.cpp" />
+    <ClCompile Include="data\SecretCodeGateway.test.cpp" />
     <ClCompile Include="domain\SecretCode.test.cpp" />
     <ClCompile Include="domain\SecretCodeRepository.test.cpp" />
     <ClCompile Include="pch.cpp">
@@ -171,7 +171,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Randomize.test.cpp" />
     <ClCompile Include="usecase\GenerateSecretCode.test.cpp" />
     <ClCompile Include="usecase\ParseInput.test.cpp" />
   </ItemGroup>

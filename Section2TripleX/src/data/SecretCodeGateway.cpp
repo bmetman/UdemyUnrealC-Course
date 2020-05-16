@@ -1,6 +1,12 @@
 #include "SecretCodeGateway.h"
+#include <time.h>
+#include <stdlib.h>
 
-int SecretCodeGateway::GenerateNumber()
+SecretCodeGateway::SecretCodeGateway() {
+	srand(static_cast<unsigned int>(time(nullptr)));
+}
+
+int SecretCodeGateway::GenerateNumber(const int& from, const int& to)
 {
-	return 0;
+	return rand() % to + from;
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <optional>
 #include "usecase/ParseInput.h"
-#include "Randomize.h"
+#include "usecase/GenerateSecretCode.h"
 
 std::optional<int> ReadNumberFromUser() {
 	std::string UserInput;
@@ -10,10 +10,10 @@ std::optional<int> ReadNumberFromUser() {
 }
 
 int main() {
-	int SecretCode = Randomize().GenerateRandomInt(0, 100);
+	auto secretCode = GenerateSecretCode().Get();
 
 	int Guess = -1;
-	while (Guess != SecretCode) {
+	while (Guess != secretCode.GetMultipliedNumbers()) {
 		std::cout << "\nEnter a number." << std::endl;
 		auto UserInput = ReadNumberFromUser();
 
@@ -24,7 +24,7 @@ int main() {
 
 		Guess = UserInput.value();
 		std::cout << "Your guess is: " << Guess << ". ";
-		std::cout << (Guess < SecretCode ? "Try higher!" : "Try lower!") << std::endl;
+		std::cout << (Guess < secretCode.GetMultipliedNumbers() ? "Try higher!" : "Try lower!") << std::endl;
 	}
 
 	std::cout << "Correct, you win!" << std::endl;

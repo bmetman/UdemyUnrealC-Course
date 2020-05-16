@@ -1,6 +1,6 @@
 #include "GenerateSecretCode.h"
 
-SecretCode GenerateSecretCode::Generate()
+SecretCode GenerateSecretCode::Get()
 {
 	return repo->Get();
 }

@@ -7,7 +7,7 @@ class GenerateSecretCode
 {
 public:
 	GenerateSecretCode(std::shared_ptr<SecretCodeRepository> r = std::make_shared<SecretCodeRepository>()) : repo(r) {}
-	SecretCode Generate();
+	SecretCode Get();
 private:
 	std::shared_ptr<SecretCodeRepository> repo;
 };

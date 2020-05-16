@@ -18,12 +18,6 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Randomize.test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Randomize.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\usecase\ParseInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -49,6 +43,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\src\data\SecretCodeGateway.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data\SecretCodeGateway.test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

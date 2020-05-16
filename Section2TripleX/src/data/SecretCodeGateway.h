@@ -2,5 +2,6 @@
 
 class SecretCodeGateway {
 public:
-	virtual int GenerateNumber();
+	SecretCodeGateway();
+	virtual int GenerateNumber(const int& = 1, const int& = 10);
 };

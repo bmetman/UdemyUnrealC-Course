@@ -7,7 +7,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 class SecretCodeGatewayMock : public SecretCodeGateway {
 public:
-	virtual int GenerateNumber() override {
+	virtual int GenerateNumber(const int&, const int&) override {
 		return -1;
 	}
 };

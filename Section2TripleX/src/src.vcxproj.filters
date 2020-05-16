@@ -18,9 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Randomize.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="usecase\ParseInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -38,12 +35,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ParseInput.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Randomize.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="usecase\GenerateSecretCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -54,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="domain\SecretCodeRepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\ParseInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
