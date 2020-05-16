@@ -3,11 +3,11 @@
 #include "../domain/Code.h"
 #include "../domain/CodeRepository.h"
 
-class GenerateCode
+class GetCode
 {
 public:
-	GenerateCode(std::shared_ptr<CodeRepository> r = std::make_shared<CodeRepository>()) : repo(r) {}
-	virtual Code Get();
+	GetCode(std::shared_ptr<CodeRepository> r = std::make_shared<CodeRepository>()) : repo(r) {}
+	virtual Code Generate();
 private:
 	std::shared_ptr<CodeRepository> repo;
 };

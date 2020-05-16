@@ -27,13 +27,13 @@
     <ClCompile Include="domain\Code.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="usecase\GenerateCode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="domain\CodeRepository.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="data\CodeGateway.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="usecase\GetCode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,13 +47,13 @@
     <ClInclude Include="domain\Code.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="usecase\GenerateCode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="domain\CodeRepository.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="data\CodeGateway.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usecase\GetCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

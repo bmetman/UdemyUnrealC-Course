@@ -144,7 +144,7 @@
     <ClCompile Include="domain\CodeRepository.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="resource\GuessSecretCode.cpp" />
-    <ClCompile Include="usecase\GenerateCode.cpp" />
+    <ClCompile Include="usecase\GetCode.cpp" />
     <ClCompile Include="usecase\ParseInput.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -152,7 +152,7 @@
     <ClInclude Include="domain\Code.h" />
     <ClInclude Include="domain\CodeRepository.h" />
     <ClInclude Include="resource\GuessSecretCode.h" />
-    <ClInclude Include="usecase\GenerateCode.h" />
+    <ClInclude Include="usecase\GetCode.h" />
     <ClInclude Include="usecase\ParseInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

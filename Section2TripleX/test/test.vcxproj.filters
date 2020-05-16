@@ -39,9 +39,6 @@
     <ClCompile Include="..\src\domain\CodeRepository.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\usecase\GenerateCode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="data\CodeGateway.test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -51,7 +48,10 @@
     <ClCompile Include="domain\CodeRepository.test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="usecase\GenerateCode.test.cpp">
+    <ClCompile Include="usecase\GetCode.test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\usecase\GetCode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -78,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\usecase\ParseInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\usecase\GetCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

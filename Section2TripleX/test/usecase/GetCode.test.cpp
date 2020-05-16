@@ -1,7 +1,7 @@
 #include "../pch.h"
 #include "CppUnitTest.h"
 #include "../../src/domain/CodeRepository.h"
-#include "../../src/usecase/GenerateCode.h"
+#include "../../src/usecase/GetCode.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -18,12 +18,12 @@ namespace test
 	{
 	public:
 
-		TEST_METHOD(When_GenerateSecretCode_Then_SecretCodeRepositoryCalled)
+		TEST_METHOD(When_GenerateCode_Then_CodeRepositoryCalled)
 		{
 			std::shared_ptr<CodeRepository> RepositoryMock = std::make_shared<CodeRepositoryMock>();
 			Assert::AreEqual(
 				Code(-1, -1, -1).GetSumOfNumbers(),
-				GenerateCode(RepositoryMock).Get().GetSumOfNumbers()
+				GetCode(RepositoryMock).Generate().GetSumOfNumbers()
 			);
 		}
 	};
