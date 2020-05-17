@@ -21,8 +21,6 @@ bool Game::IsPlayerGuessCorrect()
 	PrintCodeInformation(SecretCode);
 
 	auto UserGuess = usecase->GetPlayerCode();
-	std::cout << "Your guess is: " << UserGuess << std::endl << std::endl;
-
 	return UserGuess == SecretCode;
 }
 

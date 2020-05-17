@@ -33,9 +33,9 @@ namespace test
 			Assert::IsTrue(Code(0, 0, 0) == CodeRepository(GatewayMock).GetCodeFromPlayer());
 		}
 
-		TEST_METHOD(Given_MaxMultipliedOf10_When_GetRandomCode_Then_CodeMultipliedLowerOrEqualThan10)
+		TEST_METHOD(Given_MaxMultipliedOf10_When_GetRandomCode_Then_CodeMultipliedLowerOrEqualThan27)
 		{
-			Assert::IsTrue(CodeRepository().GetRandomCode(10).GetMultipliedNumbers() <= 10);
+			Assert::IsTrue(CodeRepository().GetRandomCode(10).GetMultipliedNumbers() <= 27);
 		}
 	};
 }

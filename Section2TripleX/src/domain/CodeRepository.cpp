@@ -4,7 +4,7 @@
 
 Code CodeRepository::GetRandomCode( const int& MaxMultiplied)
 {
-	int rangeMax = (int)std::sqrt((int)std::sqrt(MaxMultiplied));
+	int rangeMax = (int)std::sqrt(MaxMultiplied);
 	return Code(
 		gateway->GenerateNumber(1, rangeMax),
 		gateway->GenerateNumber(1, rangeMax),
