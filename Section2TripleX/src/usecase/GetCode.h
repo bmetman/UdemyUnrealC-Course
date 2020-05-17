@@ -7,7 +7,7 @@ class GetCode
 {
 public:
 	GetCode(std::shared_ptr<CodeRepository> r = std::make_shared<CodeRepository>()) : repo(r) {}
-	virtual Code GetSecretCode();
+	virtual Code GetSecretCode(const int& Difficulty = 1);
 	virtual Code GetPlayerCode();
 private:
 	std::shared_ptr<CodeRepository> repo;

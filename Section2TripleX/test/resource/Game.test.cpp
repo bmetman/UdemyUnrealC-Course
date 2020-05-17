@@ -7,7 +7,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 class GetCodeSame: public GetCode {
 public:
-	Code GetSecretCode() override {
+	Code GetSecretCode(const int&) override {
 		return Code(-1, -1, -1);
 	}
 
@@ -18,7 +18,7 @@ public:
 
 class GetCodeDifferent : public GetCode {
 public:
-	Code GetSecretCode() override {
+	Code GetSecretCode(const int&) override {
 		return Code(0, 0, 0);
 	}
 

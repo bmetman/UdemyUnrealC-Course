@@ -20,9 +20,9 @@ namespace test
 			Assert::AreEqual(9, Code(2, 3, 4).GetSumOfNumbers());
 		}
 
-		TEST_METHOD(Given_TwoSameCodes_WhenCompare_Then_ReturnTrue)
+		TEST_METHOD(Given_TwoCodesWithSameAmountOfNumbers_WhenCompare_Then_ReturnTrue)
 		{
-			Assert::IsTrue(Code(2, 3, 4) == Code(2, 3, 4));
+			Assert::IsTrue(Code(2, 3, 4) == Code(4, 3, 2));
 		}
 
 		TEST_METHOD(Given_TwoDifferentCodes_WhenCompare_Then_ReturnFalse)

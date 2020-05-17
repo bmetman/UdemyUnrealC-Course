@@ -12,9 +12,8 @@ int Code::GetSumOfNumbers()
 
 bool operator==(Code& left, Code& right)
 {
-	return left.Number1 == right.Number1 &&
-		left.Number2 == right.Number2 &&
-		left.Number3 == right.Number3;
+	return left.GetSumOfNumbers() == right.GetSumOfNumbers() && 
+		left.GetMultipliedNumbers() == right.GetMultipliedNumbers();
 }
 
 std::ostream& operator<<(std::ostream& strm, const Code& c)

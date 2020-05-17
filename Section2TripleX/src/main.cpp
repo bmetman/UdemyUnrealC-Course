@@ -5,7 +5,11 @@
 
 int main() {
 	PrintIntroduction();
-	Game().Play();
+
+	std::cout << (Game().Play().DidPlayerWin() ?
+		"Correct! You got into the server room! All that valuable data is yours! " :
+		"Wrong! You triggered the alarms and the hacker police has caught you!")
+		<< std::endl;
 }
 
 void PrintIntroduction()

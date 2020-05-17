@@ -7,12 +7,18 @@ class Game {
 public:
 public:
 	Game(std::shared_ptr<GetCode> uc = std::make_shared<GetCode>())
-		: usecase(uc), SecretCode(usecase->GetSecretCode()) {}
-	void Play();
-	
-private:
+		: usecase(uc) {}
+	Game Play();
 	virtual bool IsPlayerGuessCorrect();
-	void PrintSecretCodeInformation();
+	bool DidPlayerWin();
+
+private:
+
+	void PrintCodeInformation(Code&);
+
 	std::shared_ptr<GetCode> usecase;
-	Code SecretCode;
+
+	int Difficulty = 1;
+	const int MaxDifficulty = 5;
+	bool PlayerWon = false;
 };

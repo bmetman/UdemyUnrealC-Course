@@ -32,5 +32,10 @@ namespace test
 			std::shared_ptr<CodeGateway> GatewayMock = std::make_shared<CodeGatewayMock>();
 			Assert::IsTrue(Code(0, 0, 0) == CodeRepository(GatewayMock).GetCodeFromPlayer());
 		}
+
+		TEST_METHOD(Given_MaxMultipliedOf10_When_GetRandomCode_Then_CodeMultipliedLowerOrEqualThan10)
+		{
+			Assert::IsTrue(CodeRepository().GetRandomCode(10).GetMultipliedNumbers() <= 10);
+		}
 	};
 }

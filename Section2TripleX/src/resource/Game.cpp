@@ -1,17 +1,24 @@
 #include "Game.h"
 #include <iostream>
 
-void Game::Play()
+Game Game::Play()
 {
-	std::cout << (IsPlayerGuessCorrect() ?
-		"Correct! You got into the server room! It's filled with valuable data!" :
-		"Wrong! You triggered the alarms and the hacker police has caught you!")
-		<< std::endl;
+	while (Difficulty <= MaxDifficulty) {
+		std::cout << std::endl << "#########################" << std::endl;
+		std::cout << "## HACKING INTO DOOR " << Difficulty << " ##" << std::endl;
+		std::cout << "#########################" << std::endl << std::endl;
+
+		PlayerWon = IsPlayerGuessCorrect();
+		if (!PlayerWon) return *this;
+		Difficulty++;
+	}
+	return *this;
 }
 
 bool Game::IsPlayerGuessCorrect()
 {
-	PrintSecretCodeInformation();
+	auto SecretCode = usecase->GetSecretCode(Difficulty);
+	PrintCodeInformation(SecretCode);
 
 	auto UserGuess = usecase->GetPlayerCode();
 	std::cout << "Your guess is: " << UserGuess << std::endl << std::endl;
@@ -19,8 +26,13 @@ bool Game::IsPlayerGuessCorrect()
 	return UserGuess == SecretCode;
 }
 
-void Game::PrintSecretCodeInformation()
+bool Game::DidPlayerWin()
 {
-	std::cout << "The sum of three numbers of the door code is " << SecretCode.GetSumOfNumbers() << "." << std::endl;
-	std::cout << "The product of the three numbers of the door code is " << SecretCode.GetMultipliedNumbers() << "." << std::endl << std::endl;
+	return PlayerWon;
+}
+
+void Game::PrintCodeInformation(Code& code)
+{
+	std::cout << "The sum of three numbers of the door code is " << code.GetSumOfNumbers() << "." << std::endl;
+	std::cout << "The product of the three numbers of the door code is " << code.GetMultipliedNumbers() << "." << std::endl << std::endl;
 }
