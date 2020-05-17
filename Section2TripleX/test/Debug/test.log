@@ -1,2 +1,5 @@
-﻿     Creating library C:\Users\Bluebeard\source\repos\UdemyUnrealC-Course\Section2TripleX\src\Debug\test.lib and object C:\Users\Bluebeard\source\repos\UdemyUnrealC-Course\Section2TripleX\src\Debug\test.exp
+﻿  CodeGateway.cpp
+  ParseInput.cpp
+  CodeGateway.test.cpp
+  Generating Code...
   test.vcxproj -> C:\Users\Bluebeard\source\repos\UdemyUnrealC-Course\Section2TripleX\src\Debug\test.dll

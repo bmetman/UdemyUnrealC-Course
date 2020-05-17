@@ -158,12 +158,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\data\CodeGateway.cpp" />
+    <ClCompile Include="..\src\data\ParseInput.cpp" />
     <ClCompile Include="..\src\domain\Code.cpp" />
     <ClCompile Include="..\src\domain\CodeRepository.cpp" />
     <ClCompile Include="..\src\resource\Game.cpp" />
     <ClCompile Include="..\src\usecase\GetCode.cpp" />
-    <ClCompile Include="..\src\usecase\ParseInput.cpp" />
     <ClCompile Include="data\CodeGateway.test.cpp" />
+    <ClCompile Include="data\ParseInput.test.cpp" />
     <ClCompile Include="domain\Code.test.cpp" />
     <ClCompile Include="domain\CodeRepository.test.cpp" />
     <ClCompile Include="pch.cpp">
@@ -174,16 +175,14 @@
     </ClCompile>
     <ClCompile Include="resource\Game.test.cpp" />
     <ClCompile Include="usecase\GetCode.test.cpp" />
-    <ClCompile Include="usecase\ParseInput.test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\data\CodeGateway.h" />
+    <ClInclude Include="..\src\data\ParseInput.h" />
     <ClInclude Include="..\src\domain\Code.h" />
     <ClInclude Include="..\src\domain\CodeRepository.h" />
     <ClInclude Include="..\src\resource\Game.h" />
-    <ClInclude Include="..\src\resource\GuessSecretCode.h" />
     <ClInclude Include="..\src\usecase\GetCode.h" />
-    <ClInclude Include="..\src\usecase\ParseInput.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

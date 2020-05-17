@@ -37,13 +37,13 @@ namespace test
 		TEST_METHOD(Given_UserGuessCorrect_When_Guess_Then_ReturnTrue)
 		{
 			std::shared_ptr<GetCode> generateCodeMock = std::make_shared<GetCodeSame>();
-			Assert::IsTrue(Game(generateCodeMock).Guess());
+			Assert::IsTrue(Game(generateCodeMock).IsPlayerGuessCorrect());
 		}
 
 		TEST_METHOD(Given_UserGuessInCorrect_When_Guess_Then_ReturnFalse)
 		{
 			std::shared_ptr<GetCode> generateCodeMock = std::make_shared<GetCodeDifferent>();
-			Assert::IsFalse(Game(generateCodeMock).Guess());
+			Assert::IsFalse(Game(generateCodeMock).IsPlayerGuessCorrect());
 		}
 	};
 }

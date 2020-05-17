@@ -8,6 +8,5 @@ Code GetCode::GetSecretCode()
 
 Code GetCode::GetPlayerCode()
 {
-	std::cout << "\nEnter a number." << std::endl;
 	return repo->GetCodeFromPlayer();
 }

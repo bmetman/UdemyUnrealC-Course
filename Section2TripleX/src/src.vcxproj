@@ -140,20 +140,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="data\CodeGateway.cpp" />
+    <ClCompile Include="data\ParseInput.cpp" />
     <ClCompile Include="domain\Code.cpp" />
     <ClCompile Include="domain\CodeRepository.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="resource\Game.cpp" />
     <ClCompile Include="usecase\GetCode.cpp" />
-    <ClCompile Include="usecase\ParseInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data\CodeGateway.h" />
+    <ClInclude Include="data\ParseInput.h" />
     <ClInclude Include="domain\Code.h" />
     <ClInclude Include="domain\CodeRepository.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="resource\Game.h" />
     <ClInclude Include="usecase\GetCode.h" />
-    <ClInclude Include="usecase\ParseInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
