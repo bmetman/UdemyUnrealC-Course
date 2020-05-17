@@ -7,8 +7,12 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 class CodeRepositoryMock : public CodeRepository {
 public:
-	virtual Code Get() override {
+	virtual Code GetRandomCode() override {
 		return Code(-1, -1, -1);
+	}
+
+	virtual Code GetCodeFromPlayer() override {
+		return Code(0, 0, 0);
 	}
 };
 
@@ -17,22 +21,16 @@ namespace test
 	TEST_CLASS(test)
 	{
 	public:
-		TEST_METHOD(When_GenerateCode_Then_CodeRepositoryCalled)
+		TEST_METHOD(When_GetSecretCode_Then_CodeRepositoryCalled)
 		{
 			std::shared_ptr<CodeRepository> RepositoryMock = std::make_shared<CodeRepositoryMock>();
-			Assert::AreEqual(
-				Code(-1, -1, -1).GetSumOfNumbers(),
-				GetCode(RepositoryMock).GetSecretCode().GetSumOfNumbers()
-			);
+			Assert::IsTrue(Code(-1, -1, -1) == GetCode(RepositoryMock).GetSecretCode());
 		}
 
-		TEST_METHOD(When_GetUserCode_Then_CodeRepositoryCalled)
+		TEST_METHOD(When_GetPlayerCode_Then_CodeRepositoryCalled)
 		{
 			std::shared_ptr<CodeRepository> RepositoryMock = std::make_shared<CodeRepositoryMock>();
-			Assert::AreEqual(
-				Code(-1, -1, -1).GetSumOfNumbers(),
-				GetCode(RepositoryMock).GetSecretCode().GetSumOfNumbers()
-			);
+			Assert::IsTrue(Code(0, 0, 0) == GetCode(RepositoryMock).GetPlayerCode());
 		}
 	};
 }

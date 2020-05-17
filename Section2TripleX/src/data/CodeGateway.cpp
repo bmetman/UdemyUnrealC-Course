@@ -10,3 +10,8 @@ int CodeGateway::GenerateNumber(const int& from, const int& to)
 {
 	return rand() % to + from;
 }
+
+int CodeGateway::AskPlayerForNumber()
+{
+	return 0;
+}

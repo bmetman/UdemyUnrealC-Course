@@ -3,11 +3,11 @@
 
 Code GetCode::GetSecretCode()
 {
-	return repo->Get();
+	return repo->GetRandomCode();
 }
 
 Code GetCode::GetPlayerCode()
 {
 	std::cout << "\nEnter a number." << std::endl;
-	return repo->Get();
+	return repo->GetCodeFromPlayer();
 }

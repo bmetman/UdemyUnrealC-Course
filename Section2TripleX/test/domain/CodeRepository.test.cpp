@@ -10,6 +10,10 @@ public:
 	virtual int GenerateNumber(const int&, const int&) override {
 		return -1;
 	}
+
+	virtual int AskPlayerForNumber() override {
+		return 0;
+	}
 };
 
 namespace test
@@ -17,14 +21,16 @@ namespace test
 	TEST_CLASS(test)
 	{
 	public:
-
-		TEST_METHOD(When_GenerateCode_Then_CodeGatewayCalled)
+		TEST_METHOD(When_GetRandomCode_Then_CodeGatewayCalled)
 		{
 			std::shared_ptr<CodeGateway> GatewayMock = std::make_shared<CodeGatewayMock>();
-			Assert::AreEqual(
-				Code(-1, -1, -1).GetSumOfNumbers(),
-				CodeRepository(GatewayMock).Get().GetSumOfNumbers()
-			);
+			Assert::IsTrue(Code(-1, -1, -1) == CodeRepository(GatewayMock).GetRandomCode());
+		}
+
+		TEST_METHOD(When_GetCodeFromUserInput_Then_CodeGatewayCalled)
+		{
+			std::shared_ptr<CodeGateway> GatewayMock = std::make_shared<CodeGatewayMock>();
+			Assert::IsTrue(Code(0, 0, 0) == CodeRepository(GatewayMock).GetCodeFromPlayer());
 		}
 	};
 }

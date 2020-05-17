@@ -8,7 +8,8 @@ class CodeRepository {
 public:
 public:
 	CodeRepository(std::shared_ptr<CodeGateway> g = std::make_shared<CodeGateway>()) : gateway(g) {}
-	virtual Code Get();
+	virtual Code GetRandomCode();
+	virtual Code GetCodeFromPlayer();
 private:
 	std::shared_ptr<CodeGateway> gateway;
 };
