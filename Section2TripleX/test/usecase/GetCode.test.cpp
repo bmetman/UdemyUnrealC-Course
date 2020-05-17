@@ -17,13 +17,21 @@ namespace test
 	TEST_CLASS(test)
 	{
 	public:
-
 		TEST_METHOD(When_GenerateCode_Then_CodeRepositoryCalled)
 		{
 			std::shared_ptr<CodeRepository> RepositoryMock = std::make_shared<CodeRepositoryMock>();
 			Assert::AreEqual(
 				Code(-1, -1, -1).GetSumOfNumbers(),
-				GetCode(RepositoryMock).Generate().GetSumOfNumbers()
+				GetCode(RepositoryMock).GetSecretCode().GetSumOfNumbers()
+			);
+		}
+
+		TEST_METHOD(When_GetUserCode_Then_CodeRepositoryCalled)
+		{
+			std::shared_ptr<CodeRepository> RepositoryMock = std::make_shared<CodeRepositoryMock>();
+			Assert::AreEqual(
+				Code(-1, -1, -1).GetSumOfNumbers(),
+				GetCode(RepositoryMock).GetSecretCode().GetSumOfNumbers()
 			);
 		}
 	};

@@ -1,4 +1,6 @@
 #pragma once
+#include <ostream>
+
 class Code
 {
 public:
@@ -7,6 +9,8 @@ public:
 
 	int GetMultipliedNumbers();
 	int GetSumOfNumbers();
+	friend bool operator== (Code&, Code&);
+	friend std::ostream& operator<<(std::ostream& strm, const Code&);
 
 	const int Number1;
 	const int Number2;

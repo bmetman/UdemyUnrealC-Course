@@ -1,7 +1,7 @@
 #include <iostream>
 #include <optional>
 #include "usecase/ParseInput.h"
-#include "usecase/GetCode.h"
+#include "resource/Game.h"
 
 std::optional<int> ReadNumberFromUser() {
 	std::string UserInput;
@@ -10,21 +10,15 @@ std::optional<int> ReadNumberFromUser() {
 }
 
 int main() {
-	auto secretCode = GetCode().Generate();
+	Game game;
 
-	int Guess = -1;
-	while (Guess != secretCode.GetMultipliedNumbers()) {
-		std::cout << "\nEnter a number." << std::endl;
-		auto UserInput = ReadNumberFromUser();
+	while (game.Guess()) {
+		//auto UserInput = ReadNumberFromUser();
 
-		if (!UserInput.has_value()) {
-			std::cout << "Input is not a number." << std::endl;
-			continue;
-		}
-
-		Guess = UserInput.value();
-		std::cout << "Your guess is: " << Guess << ". ";
-		std::cout << (Guess < secretCode.GetMultipliedNumbers() ? "Try higher!" : "Try lower!") << std::endl;
+		//if (!UserInput.has_value()) {
+		//	std::cout << "Input is not a number." << std::endl;
+		//	continue;
+		//}
 	}
 
 	std::cout << "Correct, you win!" << std::endl;

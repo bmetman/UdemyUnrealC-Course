@@ -160,7 +160,7 @@
     <ClCompile Include="..\src\data\CodeGateway.cpp" />
     <ClCompile Include="..\src\domain\Code.cpp" />
     <ClCompile Include="..\src\domain\CodeRepository.cpp" />
-    <ClCompile Include="..\src\resource\GuessSecretCode.cpp" />
+    <ClCompile Include="..\src\resource\Game.cpp" />
     <ClCompile Include="..\src\usecase\GetCode.cpp" />
     <ClCompile Include="..\src\usecase\ParseInput.cpp" />
     <ClCompile Include="data\CodeGateway.test.cpp" />
@@ -172,7 +172,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="resource\GuessSecretCode.test.cpp" />
+    <ClCompile Include="resource\Game.test.cpp" />
     <ClCompile Include="usecase\GetCode.test.cpp" />
     <ClCompile Include="usecase\ParseInput.test.cpp" />
   </ItemGroup>
@@ -180,8 +180,8 @@
     <ClInclude Include="..\src\data\CodeGateway.h" />
     <ClInclude Include="..\src\domain\Code.h" />
     <ClInclude Include="..\src\domain\CodeRepository.h" />
+    <ClInclude Include="..\src\resource\Game.h" />
     <ClInclude Include="..\src\resource\GuessSecretCode.h" />
-    <ClInclude Include="..\src\usecase\GenerateCode.h" />
     <ClInclude Include="..\src\usecase\GetCode.h" />
     <ClInclude Include="..\src\usecase\ParseInput.h" />
     <ClInclude Include="pch.h" />

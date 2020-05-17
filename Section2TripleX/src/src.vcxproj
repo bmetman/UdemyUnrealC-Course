@@ -143,7 +143,7 @@
     <ClCompile Include="domain\Code.cpp" />
     <ClCompile Include="domain\CodeRepository.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="resource\GuessSecretCode.cpp" />
+    <ClCompile Include="resource\Game.cpp" />
     <ClCompile Include="usecase\GetCode.cpp" />
     <ClCompile Include="usecase\ParseInput.cpp" />
   </ItemGroup>
@@ -151,7 +151,7 @@
     <ClInclude Include="data\CodeGateway.h" />
     <ClInclude Include="domain\Code.h" />
     <ClInclude Include="domain\CodeRepository.h" />
-    <ClInclude Include="resource\GuessSecretCode.h" />
+    <ClInclude Include="resource\Game.h" />
     <ClInclude Include="usecase\GetCode.h" />
     <ClInclude Include="usecase\ParseInput.h" />
   </ItemGroup>

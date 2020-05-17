@@ -24,12 +24,6 @@
     <ClCompile Include="usecase\ParseInput.test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="resource\GuessSecretCode.test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\resource\GuessSecretCode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\data\CodeGateway.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,6 +48,12 @@
     <ClCompile Include="..\src\usecase\GetCode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\resource\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resource\Game.test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -74,13 +74,13 @@
     <ClInclude Include="..\src\domain\CodeRepository.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\usecase\GenerateCode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\usecase\ParseInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\usecase\GetCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

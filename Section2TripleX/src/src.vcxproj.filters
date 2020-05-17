@@ -21,9 +21,6 @@
     <ClCompile Include="usecase\ParseInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="resource\GuessSecretCode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="domain\Code.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,12 +33,12 @@
     <ClCompile Include="usecase\GetCode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="resource\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="usecase\ParseInput.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource\GuessSecretCode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="domain\Code.h">
@@ -54,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="usecase\GetCode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
