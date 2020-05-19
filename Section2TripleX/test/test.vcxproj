@@ -162,7 +162,7 @@
     <ClCompile Include="..\src\domain\Code.cpp" />
     <ClCompile Include="..\src\domain\CodeRepository.cpp" />
     <ClCompile Include="..\src\resource\Game.cpp" />
-    <ClCompile Include="..\src\usecase\GetCode.cpp" />
+    <ClCompile Include="..\src\usecase\GuessCode.cpp" />
     <ClCompile Include="data\CodeGateway.test.cpp" />
     <ClCompile Include="data\ParseInput.test.cpp" />
     <ClCompile Include="domain\Code.test.cpp" />
@@ -174,7 +174,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="resource\Game.test.cpp" />
-    <ClCompile Include="usecase\GetCode.test.cpp" />
+    <ClCompile Include="usecase\GuessCode.test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\data\CodeGateway.h" />
@@ -182,7 +182,7 @@
     <ClInclude Include="..\src\domain\Code.h" />
     <ClInclude Include="..\src\domain\CodeRepository.h" />
     <ClInclude Include="..\src\resource\Game.h" />
-    <ClInclude Include="..\src\usecase\GetCode.h" />
+    <ClInclude Include="..\src\usecase\GuessCode.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

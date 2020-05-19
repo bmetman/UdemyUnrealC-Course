@@ -1,11 +1,11 @@
 #include "../pch.h"
 #include "CppUnitTest.h"
-#include "../../src/usecase/GetCode.h"
+#include "../../src/usecase/GuessCode.h"
 #include "../../src/resource/Game.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-class GetCodeSame: public GetCode {
+class GuessCodeCorrect: public GuessCode {
 public:
 	Code GetSecretCode(const int&) override {
 		return Code(-1, -1, -1);
@@ -16,7 +16,7 @@ public:
 	}
 };
 
-class GetCodeDifferent : public GetCode {
+class GuessCodeIncorrect : public GuessCode {
 public:
 	Code GetSecretCode(const int&) override {
 		return Code(0, 0, 0);
@@ -36,14 +36,14 @@ namespace test
 
 		TEST_METHOD(Given_UserGuessCorrect_When_Guess_Then_ReturnTrue)
 		{
-			std::shared_ptr<GetCode> generateCodeMock = std::make_shared<GetCodeSame>();
-			Assert::IsTrue(Game(generateCodeMock).IsPlayerGuessCorrect());
+			std::shared_ptr<GuessCode> generateCodeMock = std::make_shared<GuessCodeCorrect>();
+			Assert::IsTrue(Game(generateCodeMock).PlayerGuessedCorrectly());
 		}
 
 		TEST_METHOD(Given_UserGuessInCorrect_When_Guess_Then_ReturnFalse)
 		{
-			std::shared_ptr<GetCode> generateCodeMock = std::make_shared<GetCodeDifferent>();
-			Assert::IsFalse(Game(generateCodeMock).IsPlayerGuessCorrect());
+			std::shared_ptr<GuessCode> generateCodeMock = std::make_shared<GuessCodeIncorrect>();
+			Assert::IsFalse(Game(generateCodeMock).PlayerGuessedCorrectly());
 		}
 	};
 }

@@ -1,22 +1,22 @@
 #pragma once
 #include<memory>
 
-#include "../usecase/GetCode.h"
+#include "../usecase/GuessCode.h"
 
 class Game {
 public:
 public:
-	Game(std::shared_ptr<GetCode> uc = std::make_shared<GetCode>())
+	Game(std::shared_ptr<GuessCode> uc = std::make_shared<GuessCode>())
 		: usecase(uc) {}
 	Game Play();
-	virtual bool IsPlayerGuessCorrect();
+	virtual bool PlayerGuessedCorrectly();
 	bool DidPlayerWin();
 
 private:
 
 	void PrintCodeInformation(Code&);
 
-	std::shared_ptr<GetCode> usecase;
+	std::shared_ptr<GuessCode> usecase;
 
 	int Difficulty = 1;
 	const int MaxDifficulty = 5;

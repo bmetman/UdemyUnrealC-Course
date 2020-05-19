@@ -8,14 +8,14 @@ Game Game::Play()
 		std::cout << "## HACKING INTO DOOR " << Difficulty << " ##" << std::endl;
 		std::cout << "#########################" << std::endl << std::endl;
 
-		PlayerWon = IsPlayerGuessCorrect();
-		if (!PlayerWon) return *this;
+		if (!PlayerGuessedCorrectly()) return *this;
 		Difficulty++;
 	}
+	PlayerWon = true;
 	return *this;
 }
 
-bool Game::IsPlayerGuessCorrect()
+bool Game::PlayerGuessedCorrectly()
 {
 	auto SecretCode = usecase->GetSecretCode(Difficulty);
 	PrintCodeInformation(SecretCode);

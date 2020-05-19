@@ -1,7 +1,7 @@
 #include "../pch.h"
 #include "CppUnitTest.h"
 #include "../../src/domain/CodeRepository.h"
-#include "../../src/usecase/GetCode.h"
+#include "../../src/usecase/GuessCode.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -24,13 +24,13 @@ namespace test
 		TEST_METHOD(When_GetSecretCode_Then_CodeRepositoryCalled)
 		{
 			std::shared_ptr<CodeRepository> RepositoryMock = std::make_shared<CodeRepositoryMock>();
-			Assert::IsTrue(Code(-1, -1, -1) == GetCode(RepositoryMock).GetSecretCode());
+			Assert::IsTrue(Code(-1, -1, -1) == GuessCode(RepositoryMock).GetSecretCode());
 		}
 
 		TEST_METHOD(When_GetPlayerCode_Then_CodeRepositoryCalled)
 		{
 			std::shared_ptr<CodeRepository> RepositoryMock = std::make_shared<CodeRepositoryMock>();
-			Assert::IsTrue(Code(0, 0, 0) == GetCode(RepositoryMock).GetPlayerCode());
+			Assert::IsTrue(Code(0, 0, 0) == GuessCode(RepositoryMock).GetPlayerCode());
 		}
 	};
 }

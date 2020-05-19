@@ -1,13 +1,13 @@
-#include "GetCode.h"
+#include "GuessCode.h"
 #include <iostream>
 
 
-Code GetCode::GetSecretCode(const int& Difficulty)
+Code GuessCode::GetSecretCode(const int& Difficulty)
 {
 	return repo->GetRandomCode(Difficulty * 50);
 }
 
-Code GetCode::GetPlayerCode()
+Code GuessCode::GetPlayerCode()
 {
 	return repo->GetCodeFromPlayer();
 }
