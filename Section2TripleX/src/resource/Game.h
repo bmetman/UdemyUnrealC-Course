@@ -9,13 +9,10 @@ public:
 	Game(std::shared_ptr<GuessCode> uc = std::make_shared<GuessCode>())
 		: usecase(uc) {}
 	Game Play();
-	virtual bool PlayerGuessedCorrectly();
 	bool DidPlayerWin();
 
 private:
-
-	void PrintCodeInformation(Code&);
-
+	void PrintDoor();
 	std::shared_ptr<GuessCode> usecase;
 
 	int Difficulty = 1;

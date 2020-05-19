@@ -7,9 +7,11 @@ class GuessCode
 {
 public:
 	GuessCode(std::shared_ptr<CodeRepository> r = std::make_shared<CodeRepository>()) : repo(r) {}
-	virtual Code GetSecretCode(const int& Difficulty = 1);
-	virtual Code GetPlayerCode();
+	virtual bool Guess(const int& Difficulty = 1);
+	Code GetSecretCode(const int& = 1);
+	Code GetPlayerCode();
 private:
 	std::shared_ptr<CodeRepository> repo;
+	void PrintCodeInformation(Code& code);
 };
 

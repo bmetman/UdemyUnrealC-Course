@@ -5,25 +5,17 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-class GuessCodeCorrect: public GuessCode {
+class GuessCodeWrong : public GuessCode {
 public:
-	Code GetSecretCode(const int&) override {
-		return Code(-1, -1, -1);
-	}
-
-	Code GetPlayerCode() override {
-		return Code(-1, -1, -1);
+	virtual bool Guess(const int&) {
+		return false;
 	}
 };
 
-class GuessCodeIncorrect : public GuessCode {
+class GuessCodeRight : public GuessCode {
 public:
-	Code GetSecretCode(const int&) override {
-		return Code(0, 0, 0);
-	}
-
-	Code GetPlayerCode() override {
-		return Code(-1, -1, -1);
+	virtual bool Guess(const int&) {
+		return true;
 	}
 };
 
@@ -33,17 +25,16 @@ namespace test
 	TEST_CLASS(test)
 	{
 	public:
-
-		TEST_METHOD(Given_UserGuessCorrect_When_Guess_Then_ReturnTrue)
+		TEST_METHOD(Given_PlayerGuessesFalse_When_Play_Then_PlayerDidNotWin)
 		{
-			std::shared_ptr<GuessCode> generateCodeMock = std::make_shared<GuessCodeCorrect>();
-			Assert::IsTrue(Game(generateCodeMock).PlayerGuessedCorrectly());
+			std::shared_ptr<GuessCode> GuessCodeMock = std::make_shared<GuessCodeWrong>();		
+			Assert::IsFalse(Game(GuessCodeMock).Play().DidPlayerWin());
 		}
 
-		TEST_METHOD(Given_UserGuessInCorrect_When_Guess_Then_ReturnFalse)
+		TEST_METHOD(Given_PlayerGuessesRightFiveTimes_When_Play_Then_PlayerDidWin)
 		{
-			std::shared_ptr<GuessCode> generateCodeMock = std::make_shared<GuessCodeIncorrect>();
-			Assert::IsFalse(Game(generateCodeMock).PlayerGuessedCorrectly());
+			std::shared_ptr<GuessCode> GuessCodeMock = std::make_shared<GuessCodeRight>();
+			Assert::IsTrue(Game(GuessCodeMock).Play().DidPlayerWin());
 		}
 	};
 }
